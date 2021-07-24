@@ -36,7 +36,7 @@ export default function Orphanage() {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   useEffect(() =>{
-    api.get(`orphanage/${params.id}`).then(response=>{
+    api.get(`orphanages/${params.id}`).then(response=>{
       setOrphanage(response.data);
     });
   },[params.id]);
@@ -126,10 +126,10 @@ export default function Orphanage() {
              )}
             </div>
 
-            <button type="button" className="contact-button">
+            {/*<button type="button" className="contact-button">
               <FaWhatsapp size={20} color="#FFF" />
               Entrar em contato
-            </button>
+            </button>*/}
           </div>
         </div>
       </main>
